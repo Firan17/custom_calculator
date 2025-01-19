@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page_container">
+      <div class="page_box">
+
+        <div class="text-field__label">Поиск ближайшего номинала из стандартных рядов</div>
+        <div class="text-field__group">
+
+          <input
+            class="text-field__input"
+            type="search"
+            maxlength="12"
+            id="input_field_001"
+            name="nominal"
+            placeholder="Номинал"
+            autocomplete="off"
+          />
+
+          <button class="text-field__btn" type="button" id="button_001" onclick="calculation_1()">Расчёт</button>
+
+        
+        </div>
+
+        <div id="str" class="margin_top_px font_size_17 margin_left_10"></div>
+        <div id="table_1"></div>
+        
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
