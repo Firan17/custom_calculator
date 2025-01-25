@@ -1,11 +1,12 @@
 :root {
-  --text-primary: rgb(236, 236, 241);
+  --text-primary: rgb(241, 241, 241);
   --text-secondary: rgb(210, 213, 218);
   --input-background-color: rgb(40, 40, 40);
-  --text-color: rgb(210, 213, 218);
+  --text-color: rgb(241, 241, 241);
   --input-border-color: rgb(100, 100, 100);
   --btn-background-color: rgb(180, 180, 180);
   --btn-hover-background-color: rgb(120, 120, 120);
+  --page-container-background-color: rgb(50, 50, 50);
 
   --input-shadow: rgba(158, 158, 158, 0.25);
 }
@@ -13,7 +14,7 @@
 body,
 html {
   background-color: rgb(20, 20, 20);
-  color: var(--text-secondary);
+  color: var(--text-color);
 
   tab-size: 4;
   font-family: ui-sans-serif, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -23,7 +24,7 @@ html {
 }
 
 .page_container {
-  background-color: rgb(50, 50, 50);
+  background-color: var(--page-container-background-color);
 
   border-radius: 9px;
 
@@ -44,6 +45,60 @@ html {
 
   border-radius: 20px;
 }
+
+/* Navigation bar */
+
+ul.topnav {
+  list-style-type: none;
+  border-radius: 9px;
+  margin: 0 auto;
+  max-width: 95%;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--page-container-background-color);
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a, .dropbtn {
+  display: block;
+  color: var(--text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active), .dropdown:hover .dropbtn {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li a.dropdown_a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.topnav li.right {float: right;}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--input-background-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--input-shadow);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 510px){
+  ul.topnav li.right, 
+  ul.topnav li, li.dropdown {float: none;}
+}
+
 
 /* field */
 
@@ -162,6 +217,9 @@ td, th{
 /* Медиа-запрос для больших экранов */
 @media (min-width: 1200px) {
   .page_container {
+    max-width: 1140px;
+  }
+  ul.topnav {
     max-width: 1140px;
   }
 }
