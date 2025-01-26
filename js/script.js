@@ -1,11 +1,11 @@
 console.log("console start");
 
-const _str_1_ = document.getElementById("str");
+const _str_1_ = document.getElementById("str_1");
 const _table_1_ = document.getElementById("table_1");
 const _input_1_ = document.getElementById("input_field_001");
 
 const startTable =
-  "<table><tr><td>Ряд</td><td>Допуск</td></tr><tr><td>E3</td><td>&plusmn;50%</td></tr><tr><td>E6</td><td>&plusmn;20%</td></tr><tr><td>E12</td><td>&plusmn;12%</td></tr><tr><td>E24</td><td>&plusmn;5%</td></tr><tr><td>E48</td><td>&plusmn;2%</td></tr><tr><td>E96</td><td>&plusmn;1%</td></tr><tr><td>E192</td><td>&plusmn;0.5%, 0.25%, 0.1% и точнее</td></tr></table>";
+  "<table><tbody><tr><td>Ряд</td><td>Допуск</td></tr><tr><td>E3</td><td>&plusmn;50%</td></tr><tr><td>E6</td><td>&plusmn;20%</td></tr><tr><td>E12</td><td>&plusmn;12%</td></tr><tr><td>E24</td><td>&plusmn;5%</td></tr><tr><td>E48</td><td>&plusmn;2%</td></tr><tr><td>E96</td><td>&plusmn;1%</td></tr><tr><td>E192</td><td>&plusmn;0.5%, 0.25%, 0.1% и точнее</td></tr></tbody></table>";
 
 _table_1_.innerHTML = startTable;
 
@@ -25,10 +25,21 @@ function clearTable() {
   _table_1_.innerHTML = "";
 }
 
+function clearInput1Field() {
+  _input_1_.value = "";
+  _input_1_.blur();
+}
+
+function clearButton() {
+  clearInput1Field();
+  _str_1_.innerHTML = "";
+  _table_1_.innerHTML = startTable;
+}
+
 function output(value) {
-  let table = '<table><tr><td>Ряд</td><td colspan="2">Номинал</td>';
+  let table = '<table><tbody><tr><td>Ряд</td><td colspan="2">Номинал</td>';
   for (let i = 0; i < _series_.length; i++) table += findInESeries(value, _series_[i]);
-  table += '</tr></table>';
+  table += '</tr></tbody></table>';
   _table_1_.innerHTML = table;
 }
 
@@ -64,7 +75,7 @@ function findInESeries(value, series) {
 function calculation_1() {
   // Ввод числа
   let in_value = _input_1_.value;
-  
+
 
   // Очищаем html формы
   clearHTML();
@@ -79,7 +90,7 @@ function calculation_1() {
     // _check_1_.innerHTML = "Сопротивление должно быть больше ноля!";
     _table_1_.innerHTML = startTable;
     _input_1_.value = "";
-    alert("Сопротивление должно быть больше ноля!");
+    alert("Номинал должен быть больше ноля!");
   }
   // Проверка на валидность
   else if (Number.isNaN(value)) {
@@ -91,7 +102,7 @@ function calculation_1() {
   } else {
     // Вывод введённого числа
     _input_1_.blur();
-    _str_1_.innerHTML = "Вы ввели: " + value;
+    _str_1_.innerHTML = "Вы ввели: " + value + '&nbsp <button class="clear_btn btn" type="button" id="clear_btn_001" onclick="clearButton()">Сброс</button>';
     // Расчёт и вывод
     output(value);
   }

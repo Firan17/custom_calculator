@@ -1,58 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom calculator</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
 
-    <ul class="topnav">
-      <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-      <li class="dropdown">
-        <a class="dropbtn">Dropdown</a>
-        <div class="dropdown-content">
-          <a class="dropdown_a" href="#1">Link 1</a>
-          <a class="dropdown_a" href="#2">Link 2</a>
-          <a class="dropdown_a" href="#3">Link 3</a>
-        </div>
-      </li>
+<body>
 
-      <li class="right"><a href="#about">About</a></li>
-    </ul>
+  <ul class="topnav">
+    <li><a class="active" href="./index.html">Home</a></li>
 
-
-    <div class="page_container">
-      <div class="page_box">
-
-        <div class="field__label">Поиск ближайшего номинала из стандартных рядов</div>
-        <div class="field__group">
-
-          <input
-            class="field__input"
-            type="number"
-            maxlength="12"
-            id="input_field_001"
-            name="nominal"
-            placeholder="Номинал"
-            autocomplete="off"
-          />
-
-          <button class="field__btn" type="button" id="button_001" onclick="calculation_1()">Расчёт</button>
-
-        
-        </div>
-
-        <div id="str" class="margin_top_px font_size_17 margin_left_10"></div>
-        <div id="table_1"></div>
-        
+    <li class="dropdown">
+      <a class="dropbtn">Номиналы</a>
+      <div class="dropdown-content">
+        <a class="dropdown_a" href="./index.html">Поиск ближайшего номинала из стандартных рядов</a>
+        <a class="dropdown_a" href="./renard_series.html">Ряды Ренара</a>
       </div>
-    </div>
+    </li>
 
-    <script src="js/script.js"></script>
-  </body>
+    <li><a href="#notes">Заметки</a></li>
+
+    <li class="right"><a href="#settings">Settings</a></li>
+  </ul>
+
+
+  <div class="page_container">
+    <div class="page_box">
+
+      <div class="field__label">Поиск ближайшего номинала из стандартных рядов</div>
+      <div class="field__group">
+
+        <input class="field__input" type="number" maxlength="12" id="input_field_001" name="nominal"
+          placeholder="Номинал" autocomplete="off" />
+
+        <button class="field__btn btn" type="button" id="button_001" onclick="calculation_1()">Расчёт</button>
+
+      </div>
+
+      <div id="str_1" class="margin_top_px font_size_17 margin_left_10"></div>
+      <div id="table_1"></div>
+
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
