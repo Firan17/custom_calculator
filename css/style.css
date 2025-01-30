@@ -9,6 +9,8 @@
   --page-container-background-color: rgb(50, 50, 50);
 
   --input-shadow: rgba(158, 158, 158, 0.25);
+
+  --R_SMD_X: 25px;
 }
 
 body,
@@ -181,8 +183,10 @@ ul.topnav li.right {float: right;}
 }
 .margin_left_10 {
   margin-left: 10%;
+  margin-right: auto;
 }
 
+@media screen and (max-width: 510px){ .margin_left_10 { margin-left: auto; } }
 
 /* Таблицы */
 table {
@@ -217,12 +221,44 @@ td, th{
   border-radius: 4px;
 }
 
+.btn_type_1 {
+
+}
+
 .btn {
   background-color: var(--btn-background-color);
   border-color: var(--input-border-color);
 }
 
 .btn:hover { background-color: var(--btn-hover-background-color); }
+
+.btn_div_r_smd {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: calc(var(--R_SMD_X) * 8);
+}
+
+button.right { float: right;}
+
+/* R_SMD */
+.R_SMD_contact {
+  margin: 20px auto 20px 10%;
+  padding: 2px var(--R_SMD_X);
+  max-width: calc(var(--R_SMD_X) * 6);
+  background-color: silver;
+}
+
+.R_SMD_body {
+  height: calc(var(--R_SMD_X) * 4 - 4px);
+  width: calc(var(--R_SMD_X) * 6);
+  background-color: black;
+}
+
+@media screen and (max-width: 510px){
+  .R_SMD_contact {
+    margin: 20px auto;
+  }
+}
 
 /* Медиа-запрос для больших экранов */
 @media (min-width: 1200px) {

@@ -5,7 +5,7 @@ const _table_1_ = document.getElementById("table_1");
 const _input_1_ = document.getElementById("input_field_001");
 
 const startTable =
-  "<table><tbody><tr><td>Ряд</td><td>Допуск</td></tr><tr><td>E3</td><td>&plusmn;50%</td></tr><tr><td>E6</td><td>&plusmn;20%</td></tr><tr><td>E12</td><td>&plusmn;12%</td></tr><tr><td>E24</td><td>&plusmn;5%</td></tr><tr><td>E48</td><td>&plusmn;2%</td></tr><tr><td>E96</td><td>&plusmn;1%</td></tr><tr><td>E192</td><td>&plusmn;0.5%, 0.25%, 0.1% и точнее</td></tr></tbody></table>";
+  "<table><tbody><tr><td>Ряд</td><td>Допуск</td></tr><tr><td>E3</td><td>&plusmn;50%</td></tr><tr><td>E6</td><td>&plusmn;20%</td></tr><tr><td>E12</td><td>&plusmn;10%</td></tr><tr><td>E24</td><td>&plusmn;5%</td></tr><tr><td>E48</td><td>&plusmn;2%</td></tr><tr><td>E96</td><td>&plusmn;1%</td></tr><tr><td>E192</td><td>&plusmn;0.5%, 0.25%, 0.1% и точнее</td></tr></tbody></table>";
 
 _table_1_.innerHTML = startTable;
 

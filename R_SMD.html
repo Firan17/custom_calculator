@@ -38,23 +38,25 @@
   <div class="page_container">
     <div class="page_box">
 
-      <div class="field__label">Поиск ближайшего номинала из стандартных рядов</div>
-      <div class="field__group">
+      <div class="field__label">Маркировка SMD резисторов</div>
 
-        <input class="field__input" type="number" maxlength="12" id="input_field_001" name="nominal"
-          placeholder="Номинал" autocomplete="off" />
+      <div class="R_SMD_contact">
+          <div class="R_SMD_body">
 
-        <button class="field__btn btn" type="button" id="button_001" onclick="calculation_1()">Расчёт</button>
+          </div>
+      </div>
+
+      <div class="btn_div_r_smd margin_left_10" id="btn_label">
+
+        <button class="clear_btn btn" type="button" id="analysis_btn_r_smd" onclick="">Анализ &#9660</button>
+
+        <button class="clear_btn btn right" type="button" id="synthesis_btn_r_smd" onclick="">Синтез &#9650</button>
 
       </div>
 
-      <div id="str_1" class="margin_top_px font_size_17 margin_left_10"></div>
-      <div id="table_1"></div>
 
     </div>
   </div>
-
-  <script src="js/script.js"></script>
+    
 </body>
-
 </html>
