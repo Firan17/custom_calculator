@@ -6,6 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Custom calculator</title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="./js/jquery-3.7.1.min.js"></script>
+
 </head>
 
 <body>
@@ -38,22 +45,59 @@
   <div class="page_container">
     <div class="page_box">
 
-      <div class="field__label">Маркировка SMD резисторов</div>
+      <div class="tab">
 
-      <div class="R_SMD_contact">
-          <div class="R_SMD_body">
+        <div class="tab-content" id="content-1">
+          
+          <div class="field__label">Маркировка SMD резисторов</div>
 
-          </div>
+          <form>
+
+            <div class="R_SMD_contact">
+              <div class="R_SMD_body">
+                <input class="input_r_smd" type="text" id="R_SMD_input_analysis" pattern="[A-FRSXY0-9]{3,4}" title="Минимум 6 символов"/>
+              </div>
+            </div>
+    
+            <div class="btn_div_r_smd margin_left_10" id="btn_label">
+    
+              <button class="clear_btn btn center" type="button" id="analysis_btn_r_smd" onclick="">Анализ &#9660</button>
+    
+            </div>
+
+            <div id="_check_str_1_" class="margin_top_px font_size_17 margin_left_10"></div>
+
+          </form>
+
+
+        </div>
+        <div class="tab-content" id="content-2">
+          
+          <div class="field__label">Маркировка SMD резисторов</div>
+
+
+        </div>
+        <div class="tab-content" id="content-3">
+          
+          <div class="field__label">Маркировка SMD резисторов</div>
+
+
+        </div>
+
+
+        <div class="tab-nav">
+          <input checked id="tab-btn-1" name="tab-btn" type="radio" value="">
+          <label for="tab-btn-1">Анализ</label>
+          <input id="tab-btn-2" name="tab-btn" type="radio" value="">
+          <label for="tab-btn-2">Синтез</label>
+          <input id="tab-btn-3" name="tab-btn" type="radio" value="">
+          <label for="tab-btn-3">Info</label>
+        </div>
       </div>
 
-      <div class="btn_div_r_smd margin_left_10" id="btn_label">
+      
 
-        <button class="clear_btn btn" type="button" id="analysis_btn_r_smd" onclick="">Анализ &#9660</button>
-
-        <button class="clear_btn btn right" type="button" id="synthesis_btn_r_smd" onclick="">Синтез &#9650</button>
-
-      </div>
-
+      <script src="js/R_SMD.js"></script>
 
     </div>
   </div>

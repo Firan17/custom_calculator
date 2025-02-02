@@ -1,5 +1,3 @@
-console.log("console start");
-
 const _str_2_ = document.getElementById("str_2");
 const _table_2_ = document.getElementById("table_2");
 const _input_2_ = document.getElementById("input_field_002");
