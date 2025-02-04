@@ -38,7 +38,7 @@
 
     <li><a href="#notes">Заметки</a></li>
 
-    <li class="right"><a href="#settings">Settings</a></li>
+    <li class="right"><a href="#about">About</a></li>
   </ul>
 
 
@@ -51,35 +51,33 @@
           
           <div class="field__label">Маркировка SMD резисторов</div>
 
-          <form>
-
-            <div class="R_SMD_contact">
-              <div class="R_SMD_body">
-                <input class="input_r_smd" type="text" id="R_SMD_input_analysis" pattern="[A-FRSXY0-9]{3,4}" title="Минимум 6 символов"/>
-              </div>
+          <div class="R_SMD_contact">
+            <div class="R_SMD_body">
+              <input class="input_r_smd" type="text" id="R_SMD_input_analysis"/>
             </div>
+          </div>
     
-            <div class="btn_div_r_smd margin_left_10" id="btn_label">
+          <div class="btn_div_r_smd margin_left_10" id="btn_label">
     
-              <button class="clear_btn btn center" type="button" id="analysis_btn_r_smd" onclick="">Анализ &#9660</button>
+            <button class="clear_btn btn center" type="button" id="analysis_btn_r_smd" onclick="">Анализ &#9660</button>
     
-            </div>
+          </div>
 
-            <div id="_check_str_1_" class="margin_top_px font_size_17 margin_left_10"></div>
+          <div id="_check_str_1_" class="margin_top_px font_size_17 margin_left_10"></div>
 
-          </form>
-
+          <div id="R_SMD_output"></div>
+          <div class="R_SMD_analysis_output"></div>
 
         </div>
         <div class="tab-content" id="content-2">
           
-          <div class="field__label">Маркировка SMD резисторов</div>
+          <div class="field__label">В разработке</div>
 
 
         </div>
         <div class="tab-content" id="content-3">
           
-          <div class="field__label">Маркировка SMD резисторов</div>
+          <div class="field__label">В разработке</div>
 
 
         </div>

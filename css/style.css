@@ -321,6 +321,10 @@ button.left { float: left; }
 
 .input_r_smd:focus { outline: 0; }
 
+.R_SMD_analysis_output {
+  
+}
+
 @media screen and (max-width: 510px){
   .R_SMD_contact {
     margin: 20px auto;
